@@ -38,12 +38,7 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private ModelMapper modelMapper;
     @Autowired
-    private final PasswordEncoder passwordEncoder;
-
-    public UserServiceImpl(PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
-        logger.info("Tạo ra bean: {}", UserServiceImpl.class);
-    }
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDTO findUserByUsername(String username) {
